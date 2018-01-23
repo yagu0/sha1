@@ -58,9 +58,7 @@ Sha1.Compute = function(subject)
 		var w = new Array(80);
 		for (j=0; j<16; j++) w[j] = blocks[i][j];
 		for (j=16; j<80; j++)
-		{
 			w[j] = Sha1.LeftRotate(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
-		}
 
 		// initialize a,b,c,d,e variables
 		a = h0;
